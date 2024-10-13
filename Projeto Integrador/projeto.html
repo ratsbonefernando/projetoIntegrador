@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Integrador</title>
+    <style>
+        /* Estilização geral */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f3f3;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+            margin: 20px 0;
+            font-size: 2rem;
+        }
+
+        .home {
+            padding: 20px;
+        }
+
+        /* Barra de pesquisa */
+        #search-bar {
+            width: 80%;
+            padding: 10px;
+            margin: 20px 0;
+            font-size: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        /* Botões de matérias */
+        .subject-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .subject-btn {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-size: 1rem;
+        }
+
+        .subject-btn:hover {
+            background-color: #0056b3;
+        }
+
+        /* Anos escolares */
+        .year-list {
+            margin: 20px 0;
+        }
+
+        .year-list button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-size: 1rem;
+            margin: 5px;
+        }
+
+        .year-list button:hover {
+            background-color: #218838;
+        }
+
+        /* Listas de conteúdos */
+        #year-content ul, #material ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        #year-content ul li, #material ul li {
+            padding: 10px;
+            font-size: 1rem;
+        }
+
+        #year-content ul li a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        #year-content ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Material e lista de questões */
+        #material {
+            margin: 20px auto;
+            max-width: 600px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #material h3, #material h4 {
+            color: #333;
+            margin-top: 10px;
+        }
+
+        #material a {
+            display: inline-block;
+            margin-top: 10px;
+            background-color: #007bff;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        #material a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="home">
+        <h1>Organizador de Matérias do Ensino Médio</h1>
+        <input type="text" id="search-bar" placeholder="Pesquisar matéria...">
+        <div class="subject-list">
+            <button class="subject-btn" onclick="navigateTo('Artes')">Matemática</button>
+            <button class="subject-btn" onclick="navigateTo('Biologia')">Biologia</button>
+            <button class="subject-btn" onclick="navigateTo('Educação Física')">Educação Física</button>
+            <button class="subject-btn" onclick="navigateTo('Física')">Física</button>
+            <button class="subject-btn" onclick="navigateTo('Geografia')">Geografia</button>
+            <button class="subject-btn" onclick="navigateTo('História')">História</button>
+            <button class="subject-btn" onclick="navigateTo('Informática Básica I')">Informática Básica I</button>
+            <button class="subject-btn" onclick="navigateTo('Língua Espanhola')">Língua Espanhola</button>
+            <button class="subject-btn" onclick="navigateTo('Língua Inglesa')">Língua Inglesa</button>
+            <button class="subject-btn" onclick="navigateTo('Língua Portuguesa')">Língua Portuguesa</button>
+            <button class="subject-btn" onclick="navigateTo('Matemática')">Matemática</button>
+            <button class="subject-btn" onclick="navigateTo('Projeto de Vida')">Projeto de Vida</button>
+            <button class="subject-btn" onclick="navigateTo('Química')">Química</button>
+            <button class="subject-btn" onclick="navigateTo('Redação')">Redação</button>
+        </div>
+        <div id="subject-page">
+            <h2>Matemática</h2>
+            <div class="year-list">
+                <button onclick="navigateTo('matematica-1ano')">1º Ano</button>
+                <button onclick="navigateTo('matematica-2ano')">2º Ano</button>
+                <button onclick="navigateTo('matematica-3ano')">3º Ano</button>
+            </div>
+        </div>        
+        </div>
+        <div id="year-content">
+            <h3>Matemática - 1º Ano</h3>
+            <ul>
+                <li><a href="material.html?topic=equacoes">Equações do 1º Grau</a></li>
+                <li><a href="material.html?topic=funcoes">Funções</a></li>
+                <!-- Adicione mais tópicos -->
+            </ul>
+        </div>
+        <div id="material">
+            <h3>Equações do 1º Grau</h3>
+            <p>Aqui você encontra o material de estudo sobre Equações do 1º Grau...</p>
+            <a href="https://www.ficoumaisfacil.com.br/conteudos/listas/listexfund/problemas1grau.pdf" download>Baixar Material de Estudo (PDF)</a>
+            <h4>Lista de Questões</h4>
+            <ul>
+                <li>Questão 1: ...</li>
+                <li>Questão 2: ...</li>
+                <!-- Mais questões -->
+            </ul>
+        </div>
+</body>
+</html>
